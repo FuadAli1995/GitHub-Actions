@@ -1,0 +1,21 @@
+# key value pairs
+
+name: Foo Bar
+age: 30
+job: DevOps Engineer
+
+# Lists
+
+fruits:
+- apple
+- banana
+- cherry
+
+# nested elements
+
+address:  
+  street: 123 Downing street
+  city: London
+  country: United Kingdom
+
+  
