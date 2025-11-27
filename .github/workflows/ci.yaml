@@ -8,14 +8,14 @@ jobs:
 
     strategy:
       matrix:
-        python-version: [3.9, 3.11]
+        python-version: ["3.10", "3.11", "3.12"]
 
     steps:
       - name: checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v2
 
       - name: setup python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
 
@@ -31,8 +31,8 @@ jobs:
           python -m unittest discover
 
       - name: notify us of success
-        if: success()
         run: echo "Tests passed on Python ${{ matrix.python-version }}"
+        if: success()
 
 
     
